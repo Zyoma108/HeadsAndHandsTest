@@ -78,14 +78,38 @@
 		EA0D2EAC21EEEE970038D2A6 /* HeadsAndHandsTest */ = {
 			isa = PBXGroup;
 			children = (
-				EA0D2EAD21EEEE970038D2A6 /* AppDelegate.swift */,
-				EA0D2EAF21EEEE970038D2A6 /* ViewController.swift */,
-				EA0D2EB121EEEE970038D2A6 /* Main.storyboard */,
-				EA0D2EB421EEEE990038D2A6 /* Assets.xcassets */,
-				EA0D2EB621EEEE990038D2A6 /* LaunchScreen.storyboard */,
-				EA0D2EB921EEEE990038D2A6 /* Info.plist */,
+				EA0D2EC021EEF2C80038D2A6 /* Resources */,
+				EA0D2EC221EEF3150038D2A6 /* Scenes */,
+				EA0D2EC121EEF2FD0038D2A6 /* Supporting Files */,
 			);
 			path = HeadsAndHandsTest;
+			sourceTree = "<group>";
+		};
+		EA0D2EC021EEF2C80038D2A6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EA0D2EB121EEEE970038D2A6 /* Main.storyboard */,
+				EA0D2EB621EEEE990038D2A6 /* LaunchScreen.storyboard */,
+				EA0D2EB421EEEE990038D2A6 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		EA0D2EC121EEF2FD0038D2A6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EA0D2EAD21EEEE970038D2A6 /* AppDelegate.swift */,
+				EA0D2EB921EEEE990038D2A6 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EA0D2EC221EEF3150038D2A6 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				EA0D2EAF21EEEE970038D2A6 /* ViewController.swift */,
+			);
+			path = Scenes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
