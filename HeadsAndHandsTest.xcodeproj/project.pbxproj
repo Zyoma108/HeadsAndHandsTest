@@ -12,9 +12,12 @@
 		EA0D2EB321EEEE970038D2A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA0D2EB121EEEE970038D2A6 /* Main.storyboard */; };
 		EA0D2EB521EEEE990038D2A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA0D2EB421EEEE990038D2A6 /* Assets.xcassets */; };
 		EA0D2EB821EEEE990038D2A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA0D2EB621EEEE990038D2A6 /* LaunchScreen.storyboard */; };
+		F0B5B0F48867C7B433F77CB3 /* Pods_HeadsAndHandsTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6E4CB59BD7A856C9485C2DF /* Pods_HeadsAndHandsTest.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2028CD543EF745C38CAB556E /* Pods-HeadsAndHandsTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeadsAndHandsTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-HeadsAndHandsTest/Pods-HeadsAndHandsTest.release.xcconfig"; sourceTree = "<group>"; };
+		324B9A0FEC8637CF2EA0DA1E /* Pods-HeadsAndHandsTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeadsAndHandsTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HeadsAndHandsTest/Pods-HeadsAndHandsTest.debug.xcconfig"; sourceTree = "<group>"; };
 		EA0D2EAA21EEEE970038D2A6 /* HeadsAndHandsTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeadsAndHandsTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA0D2EAD21EEEE970038D2A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EA0D2EAF21EEEE970038D2A6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +25,7 @@
 		EA0D2EB421EEEE990038D2A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA0D2EB721EEEE990038D2A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EA0D2EB921EEEE990038D2A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F6E4CB59BD7A856C9485C2DF /* Pods_HeadsAndHandsTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HeadsAndHandsTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0B5B0F48867C7B433F77CB3 /* Pods_HeadsAndHandsTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C8331D18DF39277E1F317F3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				324B9A0FEC8637CF2EA0DA1E /* Pods-HeadsAndHandsTest.debug.xcconfig */,
+				2028CD543EF745C38CAB556E /* Pods-HeadsAndHandsTest.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C5185F1B8E594421EB3AB8B4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F6E4CB59BD7A856C9485C2DF /* Pods_HeadsAndHandsTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		EA0D2EA121EEEE970038D2A6 = {
 			isa = PBXGroup;
 			children = (
 				EA0D2EAC21EEEE970038D2A6 /* HeadsAndHandsTest */,
 				EA0D2EAB21EEEE970038D2A6 /* Products */,
+				2C8331D18DF39277E1F317F3 /* Pods */,
+				C5185F1B8E594421EB3AB8B4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +95,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EA0D2EBC21EEEE990038D2A6 /* Build configuration list for PBXNativeTarget "HeadsAndHandsTest" */;
 			buildPhases = (
+				F794A2C8982DBA8333F8B8B1 /* [CP] Check Pods Manifest.lock */,
 				EA0D2EA621EEEE970038D2A6 /* Sources */,
 				EA0D2EA721EEEE970038D2A6 /* Frameworks */,
 				EA0D2EA821EEEE970038D2A6 /* Resources */,
+				80B461902E440394D9DC1972 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,6 +155,57 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		80B461902E440394D9DC1972 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-HeadsAndHandsTest/Pods-HeadsAndHandsTest-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HeadsAndHandsTest/Pods-HeadsAndHandsTest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F794A2C8982DBA8333F8B8B1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HeadsAndHandsTest-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EA0D2EA621EEEE970038D2A6 /* Sources */ = {
@@ -280,6 +357,7 @@
 		};
 		EA0D2EBD21EEEE990038D2A6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 324B9A0FEC8637CF2EA0DA1E /* Pods-HeadsAndHandsTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -299,6 +377,7 @@
 		};
 		EA0D2EBE21EEEE990038D2A6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2028CD543EF745C38CAB556E /* Pods-HeadsAndHandsTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
