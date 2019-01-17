@@ -8,7 +8,7 @@
 
 import UIKit
 
-class InitialViewController: UIViewController {
+class InitialViewController: BaseViewController {
 
     // MARK: - Properties
     @IBOutlet private weak var testButton: UIButton!
