@@ -10,9 +10,26 @@ import UIKit
 
 class InitialViewController: UIViewController {
 
+    // MARK: - Properties
+    @IBOutlet private weak var testButton: UIButton!
+    
+    let viewModel = InitialViewModel()
+    
+    // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        setup()
     }
-
+    
+    // MARK: - Actions
+    @IBAction private func testButtonClicked(_ sender: Any) {
+        performSegue(withIdentifier: viewModel.loginSegueIdentifier, sender: nil)
+    }
+    
+    // MARK: - Private
+    private func setup() {
+        testButton.cornerRadius = testButton.frame.height / 2
+    }
+    
 }

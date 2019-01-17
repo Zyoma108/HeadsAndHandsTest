@@ -13,6 +13,8 @@
 		EA0D2EB321EEEE970038D2A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA0D2EB121EEEE970038D2A6 /* Main.storyboard */; };
 		EA0D2EB521EEEE990038D2A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA0D2EB421EEEE990038D2A6 /* Assets.xcassets */; };
 		EA0D2EB821EEEE990038D2A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA0D2EB621EEEE990038D2A6 /* LaunchScreen.storyboard */; };
+		EAA79D5921F03FB900B1F460 /* InitialViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA79D5821F03FB900B1F460 /* InitialViewModel.swift */; };
+		EAA79D5C21F0409600B1F460 /* UIViewExtensions+Radius.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA79D5B21F0409600B1F460 /* UIViewExtensions+Radius.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,8 @@
 		EA0D2EB421EEEE990038D2A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA0D2EB721EEEE990038D2A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EA0D2EB921EEEE990038D2A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EAA79D5821F03FB900B1F460 /* InitialViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewModel.swift; sourceTree = "<group>"; };
+		EAA79D5B21F0409600B1F460 /* UIViewExtensions+Radius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewExtensions+Radius.swift"; sourceTree = "<group>"; };
 		F64637F857391D358F37CC75 /* Pods-HeadsAndHandsTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeadsAndHandsTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-HeadsAndHandsTest/Pods-HeadsAndHandsTest.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -80,6 +84,7 @@
 			children = (
 				EA0D2EC021EEF2C80038D2A6 /* Resources */,
 				EA0D2EC221EEF3150038D2A6 /* Scenes */,
+				EAA79D5A21F0406600B1F460 /* Extensions */,
 				EA0D2EC121EEF2FD0038D2A6 /* Supporting Files */,
 			);
 			path = HeadsAndHandsTest;
@@ -115,9 +120,18 @@
 		EA0D2EC321EEF3550038D2A6 /* Initial */ = {
 			isa = PBXGroup;
 			children = (
+				EAA79D5821F03FB900B1F460 /* InitialViewModel.swift */,
 				EA0D2EAF21EEEE970038D2A6 /* InitialViewController.swift */,
 			);
 			path = Initial;
+			sourceTree = "<group>";
+		};
+		EAA79D5A21F0406600B1F460 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				EAA79D5B21F0409600B1F460 /* UIViewExtensions+Radius.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,8 +258,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAA79D5C21F0409600B1F460 /* UIViewExtensions+Radius.swift in Sources */,
 				EA0D2EB021EEEE970038D2A6 /* InitialViewController.swift in Sources */,
 				EA0D2EAE21EEEE970038D2A6 /* AppDelegate.swift in Sources */,
+				EAA79D5921F03FB900B1F460 /* InitialViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
