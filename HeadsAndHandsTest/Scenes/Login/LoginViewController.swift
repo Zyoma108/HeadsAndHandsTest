@@ -75,8 +75,10 @@ class LoginViewController: BaseViewController {
             textField?.addFloatingPlaceholderWith(font: UIFont.systemFont(ofSize: 12), color: .warmGrey)
         }
         
-        viewModel.errorSubject.subscribe(onNext: { error in
-            print("validation error \(error)")
+        viewModel.errorSubject.subscribe(onNext: { [weak self] message in
+            guard let `self` = self else { return }
+            
+            self.showAlertWith(title: "Ошибка", message: message)
         }).disposed(by: disposeBag)
     }
     
