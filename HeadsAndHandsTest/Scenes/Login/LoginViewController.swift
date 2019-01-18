@@ -15,6 +15,7 @@ class LoginViewController: BaseViewController {
     @IBOutlet private weak var emailTextField: UITextField!
     @IBOutlet private weak var passwordTextField: UITextField!
     @IBOutlet private weak var loginButton: UIButton!
+    @IBOutlet private weak var activityIndicator: UIActivityIndicatorView!
     
     let viewModel = LoginViewModel()
 
@@ -42,15 +43,16 @@ class LoginViewController: BaseViewController {
     
     // MARK: - Actions
     @IBAction private func loginButtonClicked(_ sender: Any) {
+        view.endEditing(false)
         viewModel.login()
     }
     
     @IBAction private func signUpButtonClicked(_ sender: Any) {
-
+        // do something
     }
     
     @IBAction private func forgotButtonClicked(_ sender: Any) {
-
+        // do something
     }
     
     @IBAction private func textDidChange(_ sender: UITextField) {
@@ -82,6 +84,23 @@ class LoginViewController: BaseViewController {
             guard let `self` = self else { return }
             
             self.showAlertWith(title: "Ошибка", message: message)
+        }).disposed(by: disposeBag)
+        
+        viewModel.weatherSubject.subscribe(onNext: { [weak self] weather in
+            guard let `self` = self else { return }
+            
+            self.showAlertWith(title: "Погода", message: weather)
+        }).disposed(by: disposeBag)
+        
+        viewModel.isLoadingSubject.subscribe(onNext: { [weak self] isLoading in
+            guard let `self` = self else { return }
+            
+            if isLoading {
+                self.activityIndicator.startAnimating()
+            } else {
+                self.activityIndicator.stopAnimating()
+            }
+            self.loginButton.isEnabled = !isLoading
         }).disposed(by: disposeBag)
     }
     

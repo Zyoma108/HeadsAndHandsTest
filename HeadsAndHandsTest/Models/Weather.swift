@@ -43,3 +43,11 @@ struct Weather: Decodable {
         self.condition = try condition.decode(String.self, forKey: .text)
     }
 }
+
+extension Weather {
+    
+    var description: String {
+        return "\(condition). Air temperature \(tempC)°. Wind \(windDir) \(windKph)kph."
+    }
+    
+}

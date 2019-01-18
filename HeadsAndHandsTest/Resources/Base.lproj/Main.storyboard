@@ -149,6 +149,9 @@
                                                     <action selector="loginButtonClicked:" destination="eAg-sG-rbx" eventType="touchUpInside" id="ffw-B6-op6"/>
                                                 </connections>
                                             </button>
+                                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="XyY-KV-rzj">
+                                                <rect key="frame" x="257.5" y="155" width="20" height="20"/>
+                                            </activityIndicatorView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HQn-xZ-EcD" userLabel="Sign Up Button">
                                                 <rect key="frame" x="47" y="208" width="251" height="30"/>
                                                 <state key="normal" title="У меня еще нет аккаунта. Создать.">
@@ -161,6 +164,7 @@
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
+                                            <constraint firstItem="XyY-KV-rzj" firstAttribute="centerY" secondItem="tFz-AX-3ld" secondAttribute="centerY" id="2eU-dj-pSk"/>
                                             <constraint firstItem="HQn-xZ-EcD" firstAttribute="centerX" secondItem="2tx-Lt-Bto" secondAttribute="centerX" id="3Na-ee-DQb"/>
                                             <constraint firstAttribute="trailing" secondItem="HhZ-eK-gfY" secondAttribute="trailing" id="3bQ-cw-U0x"/>
                                             <constraint firstItem="l7s-eu-Aa8" firstAttribute="trailing" secondItem="Otr-gr-3By" secondAttribute="trailing" id="6mn-4k-9I3"/>
@@ -170,6 +174,7 @@
                                             <constraint firstItem="l7s-eu-Aa8" firstAttribute="centerY" secondItem="Otr-gr-3By" secondAttribute="centerY" id="RqE-Qi-IZv"/>
                                             <constraint firstItem="Otr-gr-3By" firstAttribute="leading" secondItem="2tx-Lt-Bto" secondAttribute="leading" id="WwG-6K-P1o"/>
                                             <constraint firstItem="Otr-gr-3By" firstAttribute="top" secondItem="HhZ-eK-gfY" secondAttribute="bottom" constant="22" id="bfw-Wt-DvA"/>
+                                            <constraint firstItem="XyY-KV-rzj" firstAttribute="leading" secondItem="tFz-AX-3ld" secondAttribute="trailing" constant="10" id="jJO-Fn-OaM"/>
                                             <constraint firstItem="tFz-AX-3ld" firstAttribute="top" secondItem="Otr-gr-3By" secondAttribute="bottom" constant="33" id="ntY-gn-y5g"/>
                                             <constraint firstItem="HhZ-eK-gfY" firstAttribute="top" secondItem="2tx-Lt-Bto" secondAttribute="top" id="rho-Rp-ueD"/>
                                             <constraint firstAttribute="trailing" secondItem="Otr-gr-3By" secondAttribute="trailing" id="uMc-9N-d8z"/>
@@ -200,6 +205,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="activityIndicator" destination="XyY-KV-rzj" id="7kH-J4-wz9"/>
                         <outlet property="emailTextField" destination="HhZ-eK-gfY" id="kle-sv-95f"/>
                         <outlet property="loginButton" destination="tFz-AX-3ld" id="4nN-te-YeA"/>
                         <outlet property="passwordTextField" destination="Otr-gr-3By" id="A3S-jh-VWa"/>

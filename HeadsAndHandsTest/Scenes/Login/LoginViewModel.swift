@@ -11,7 +11,11 @@ import RxSwift
 
 class LoginViewModel: BaseViewModel {
     
+    private let city = "Moscow"
+    
     let errorSubject = PublishSubject<String>()
+    let weatherSubject = PublishSubject<String>()
+    let isLoadingSubject = PublishSubject<Bool>()
     
     var email: String?
     var password: String?
@@ -38,8 +42,24 @@ class LoginViewModel: BaseViewModel {
             errorSubject.onNext("Пароль должен содержать минимум 6 символов, минимум 1 строчную букву, 1 заглавную, и 1 цифру")
             return
         }
-            
+        
+        fetchWeather()
     }
     
+    private func fetchWeather() {
+        let service = WeatherService(city: city)
+        
+        startLoading()
+        service.fetchObservable().subscribe(onNext: { [weak self] weather in
+            self?.weatherSubject.onNext(weather.description)
+        }, onError: { [weak self] error in
+            self?.errorSubject.onNext(error.localizedDescription)
+        }, onCompleted: { [weak self] in
+            self?.stopLoading()
+        }).disposed(by: disposeBag)
+    }
     
+    private func startLoading() { isLoadingSubject.onNext(true) }
+    
+    private func stopLoading() { isLoadingSubject.onNext(false) }
 }
