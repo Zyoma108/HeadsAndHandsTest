@@ -19,7 +19,7 @@ class LoginViewModel: BaseViewModel {
     func login() {
         // validate email
         guard let email = email, !email.isEmpty else {
-            errorSubject.onNext("Почта не должна быть пустой")
+            errorSubject.onNext("Поле ввода почты пустое")
             return
         }
         
@@ -30,7 +30,7 @@ class LoginViewModel: BaseViewModel {
 
         // validate password
         guard let password = password, !password.isEmpty else {
-            errorSubject.onNext("Пароль не должен быть пустым")
+            errorSubject.onNext("Поле ввода пароля пустое")
             return
         }
         
