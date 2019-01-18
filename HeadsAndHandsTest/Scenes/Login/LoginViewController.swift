@@ -56,6 +56,12 @@ class LoginViewController: BaseViewController {
     // MARK: - Private
     private func setup() {
         view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapOnBackground)))
+        
+        loginButton.cornerRadius = loginButton.frame.height / 2
+        [emailTextField, passwordTextField].forEach { textField in
+            textField?.delegate = self
+            textField?.addUnderLine(with: UIColor(white: 235 / 255, alpha: 1))
+        }
     }
     
     private func setVisibleViewBottomWith(height: CGFloat) {
@@ -63,6 +69,23 @@ class LoginViewController: BaseViewController {
             self?.visibleViewBottom.constant = height
             self?.view.layoutIfNeeded()
         }
+    }
+    
+}
+
+extension LoginViewController: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        switch textField {
+        case emailTextField:
+            passwordTextField.becomeFirstResponder()
+        case passwordTextField:
+            passwordTextField.endEditing(false)
+        default:
+            break
+        }
+        
+        return true
     }
     
 }

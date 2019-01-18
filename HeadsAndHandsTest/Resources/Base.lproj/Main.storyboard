@@ -43,7 +43,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Тестовое Задание" id="Lg0-cI-2Oj">
-                        <barButtonItem key="backBarButtonItem" title=" " id="O81-3n-cw4"/>
+                        <barButtonItem key="backBarButtonItem" title=" " id="O81-3n-cw4">
+                            <color key="tintColor" red="0.29019607843137252" green="0.56470588235294117" blue="0.88627450980392153" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="testButton" destination="Yp6-kI-ynu" id="m9H-0Q-1gI"/>
@@ -68,23 +70,23 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2tx-Lt-Bto" userLabel="Items Contaier View">
                                         <rect key="frame" x="15" y="187.5" width="345" height="228"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HhZ-eK-gfY" userLabel="Email Text Field">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Почта" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HhZ-eK-gfY" userLabel="Email Text Field">
                                                 <rect key="frame" x="0.0" y="0.0" width="345" height="44"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="44" id="OvQ-7h-OMR"/>
                                                 </constraints>
-                                                <nil key="textColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next" textContentType="email"/>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Otr-gr-3By" userLabel="Password Text Field">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Пароль" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Otr-gr-3By" userLabel="Password Text Field">
                                                 <rect key="frame" x="0.0" y="56" width="345" height="44"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="44" id="13S-HP-yGZ"/>
                                                 </constraints>
-                                                <nil key="textColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES" textContentType="password"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tFz-AX-3ld" userLabel="Login Button">
                                                 <rect key="frame" x="97.5" y="133" width="150" height="44"/>
@@ -145,7 +147,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6mi-Lb-hPh"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Авторизация" id="BhW-7M-8xS"/>
+                    <navigationItem key="navigationItem" title="Авторизация" id="BhW-7M-8xS">
+                        <barButtonItem key="backBarButtonItem" title=" " id="7Zk-sF-pJv">
+                            <color key="tintColor" red="0.2901960784" green="0.56470588239999997" blue="0.8862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="emailTextField" destination="HhZ-eK-gfY" id="kle-sv-95f"/>
                         <outlet property="loginButton" destination="tFz-AX-3ld" id="4nN-te-YeA"/>
