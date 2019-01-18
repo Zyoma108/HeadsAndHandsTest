@@ -12,4 +12,5 @@ extension UIColor {
     
     static let whiteThree = UIColor(white: 235 / 255, alpha: 1)
     
+    static let warmGrey = UIColor(white: 121 / 255, alpha: 1)
 }

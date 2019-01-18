@@ -61,6 +61,7 @@ class LoginViewController: BaseViewController {
         [emailTextField, passwordTextField].forEach { textField in
             textField?.delegate = self
             textField?.addUnderLine(with: .whiteThree)
+            textField?.addFloatingPlaceholderWith(font: UIFont.systemFont(ofSize: 12), color: .warmGrey)
         }
     }
     
