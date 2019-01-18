@@ -15,21 +15,9 @@ class InitialViewController: BaseViewController {
     
     let viewModel = InitialViewModel()
     
-    // MARK: - Life Cycle
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        setup()
-    }
-    
     // MARK: - Actions
     @IBAction private func testButtonClicked(_ sender: Any) {
         performSegue(withIdentifier: viewModel.loginSegueIdentifier, sender: nil)
-    }
-    
-    // MARK: - Private
-    private func setup() {
-        testButton.cornerRadius = testButton.frame.height / 2
     }
     
 }

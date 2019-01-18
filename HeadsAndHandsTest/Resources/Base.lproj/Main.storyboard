@@ -30,6 +30,11 @@
                                 <state key="normal" title="Авторизация">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="22"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="testButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QgR-KD-HMY"/>
                                 </connections>
@@ -94,6 +99,32 @@
                                                     <action selector="textDidChange:" destination="eAg-sG-rbx" eventType="editingChanged" id="Pep-Xl-tmy"/>
                                                 </connections>
                                             </textField>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l7s-eu-Aa8" customClass="CustomButtonView" customModule="HeadsAndHandsTest" customModuleProvider="target">
+                                                <rect key="frame" x="235" y="73" width="110" height="30"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="C7d-1d-2tD"/>
+                                                    <constraint firstAttribute="width" constant="110" id="GEB-Ag-VTf"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Забыли пароль?"/>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="titleColor">
+                                                        <color key="value" red="0.47450980392156861" green="0.47450980392156861" blue="0.47450980392156861" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="0.5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" red="0.92156862745098034" green="0.92156862745098034" blue="0.92156862745098034" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="titleFontSize">
+                                                        <real key="value" value="12"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tFz-AX-3ld" userLabel="Login Button">
                                                 <rect key="frame" x="97.5" y="143" width="150" height="44"/>
                                                 <color key="backgroundColor" red="1" green="0.60784313729999995" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -106,6 +137,11 @@
                                                 <state key="normal" title="Войти">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="22"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="loginButtonClicked:" destination="eAg-sG-rbx" eventType="touchUpInside" id="ffw-B6-op6"/>
                                                 </connections>
@@ -124,9 +160,11 @@
                                         <constraints>
                                             <constraint firstItem="HQn-xZ-EcD" firstAttribute="centerX" secondItem="2tx-Lt-Bto" secondAttribute="centerX" id="3Na-ee-DQb"/>
                                             <constraint firstAttribute="trailing" secondItem="HhZ-eK-gfY" secondAttribute="trailing" id="3bQ-cw-U0x"/>
+                                            <constraint firstItem="l7s-eu-Aa8" firstAttribute="trailing" secondItem="Otr-gr-3By" secondAttribute="trailing" id="6mn-4k-9I3"/>
                                             <constraint firstItem="tFz-AX-3ld" firstAttribute="centerX" secondItem="2tx-Lt-Bto" secondAttribute="centerX" id="B5X-Vo-Tty"/>
                                             <constraint firstItem="HhZ-eK-gfY" firstAttribute="leading" secondItem="2tx-Lt-Bto" secondAttribute="leading" id="CiP-nG-ghS"/>
                                             <constraint firstAttribute="bottom" secondItem="HQn-xZ-EcD" secondAttribute="bottom" id="F3Z-TD-FWo"/>
+                                            <constraint firstItem="l7s-eu-Aa8" firstAttribute="centerY" secondItem="Otr-gr-3By" secondAttribute="centerY" id="RqE-Qi-IZv"/>
                                             <constraint firstItem="Otr-gr-3By" firstAttribute="leading" secondItem="2tx-Lt-Bto" secondAttribute="leading" id="WwG-6K-P1o"/>
                                             <constraint firstItem="Otr-gr-3By" firstAttribute="top" secondItem="HhZ-eK-gfY" secondAttribute="bottom" constant="22" id="bfw-Wt-DvA"/>
                                             <constraint firstItem="tFz-AX-3ld" firstAttribute="top" secondItem="Otr-gr-3By" secondAttribute="bottom" constant="33" id="ntY-gn-y5g"/>

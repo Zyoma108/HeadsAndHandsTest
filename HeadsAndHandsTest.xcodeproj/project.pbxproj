@@ -16,6 +16,7 @@
 		EA29E84221F1A0A900EA1BE9 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA29E84121F1A0A900EA1BE9 /* BaseViewModel.swift */; };
 		EA29E84421F1A19A00EA1BE9 /* StringExtensions+Validators.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA29E84321F1A19A00EA1BE9 /* StringExtensions+Validators.swift */; };
 		EA29E84621F1A6B800EA1BE9 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA29E84521F1A6B700EA1BE9 /* UIViewController+Alert.swift */; };
+		EA29E84921F1AA2E00EA1BE9 /* CustomButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA29E84821F1AA2E00EA1BE9 /* CustomButtonView.swift */; };
 		EAA79D5921F03FB900B1F460 /* InitialViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA79D5821F03FB900B1F460 /* InitialViewModel.swift */; };
 		EAA79D5C21F0409600B1F460 /* UIViewExtensions+Radius.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA79D5B21F0409600B1F460 /* UIViewExtensions+Radius.swift */; };
 		EAA79D6121F0421900B1F460 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA79D6021F0421900B1F460 /* BaseViewController.swift */; };
@@ -39,6 +40,7 @@
 		EA29E84121F1A0A900EA1BE9 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		EA29E84321F1A19A00EA1BE9 /* StringExtensions+Validators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StringExtensions+Validators.swift"; sourceTree = "<group>"; };
 		EA29E84521F1A6B700EA1BE9 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
+		EA29E84821F1AA2E00EA1BE9 /* CustomButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonView.swift; sourceTree = "<group>"; };
 		EAA79D5821F03FB900B1F460 /* InitialViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewModel.swift; sourceTree = "<group>"; };
 		EAA79D5B21F0409600B1F460 /* UIViewExtensions+Radius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewExtensions+Radius.swift"; sourceTree = "<group>"; };
 		EAA79D6021F0421900B1F460 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -154,6 +156,14 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		EA29E84721F1A9FF00EA1BE9 /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				EA29E84821F1AA2E00EA1BE9 /* CustomButtonView.swift */,
+			);
+			path = Controls;
+			sourceTree = "<group>";
+		};
 		EAA79D5A21F0406600B1F460 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -172,6 +182,7 @@
 			children = (
 				EA29E84021F1A09B00EA1BE9 /* ViewModel */,
 				EAA79D5F21F041FA00B1F460 /* ViewController */,
+				EA29E84721F1A9FF00EA1BE9 /* Controls */,
 			);
 			path = CustomComponents;
 			sourceTree = "<group>";
@@ -324,6 +335,7 @@
 				EAA79D6421F042CA00B1F460 /* LoginViewController.swift in Sources */,
 				EAA79D6121F0421900B1F460 /* BaseViewController.swift in Sources */,
 				EAA79D5C21F0409600B1F460 /* UIViewExtensions+Radius.swift in Sources */,
+				EA29E84921F1AA2E00EA1BE9 /* CustomButtonView.swift in Sources */,
 				EA0D2EB021EEEE970038D2A6 /* InitialViewController.swift in Sources */,
 				EA0D2EAE21EEEE970038D2A6 /* AppDelegate.swift in Sources */,
 				EAB20B0E21F19751000C33F3 /* UITextFieldExtension+FloatingPlaceholder.swift in Sources */,

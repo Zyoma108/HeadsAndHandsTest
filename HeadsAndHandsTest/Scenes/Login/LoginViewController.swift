@@ -68,7 +68,6 @@ class LoginViewController: BaseViewController {
     private func setup() {
         view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapOnBackground)))
         
-        loginButton.cornerRadius = loginButton.frame.height / 2
         [emailTextField, passwordTextField].forEach { textField in
             textField?.delegate = self
             textField?.addUnderLineWith(color: .whiteThree)
