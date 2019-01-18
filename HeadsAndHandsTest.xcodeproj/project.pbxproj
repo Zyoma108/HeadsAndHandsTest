@@ -20,6 +20,8 @@
 		EA29E84C21F1B73200EA1BE9 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA29E84B21F1B73200EA1BE9 /* APIService.swift */; };
 		EA29E84E21F1B7E800EA1BE9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA29E84D21F1B7E800EA1BE9 /* Constants.swift */; };
 		EA29E85121F1BD6F00EA1BE9 /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA29E85021F1BD6F00EA1BE9 /* CustomError.swift */; };
+		EA29E85321F1D4D800EA1BE9 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA29E85221F1D4D800EA1BE9 /* Weather.swift */; };
+		EA29E85521F1D63B00EA1BE9 /* WeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA29E85421F1D63B00EA1BE9 /* WeatherService.swift */; };
 		EAA79D5921F03FB900B1F460 /* InitialViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA79D5821F03FB900B1F460 /* InitialViewModel.swift */; };
 		EAA79D5C21F0409600B1F460 /* UIViewExtensions+Radius.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA79D5B21F0409600B1F460 /* UIViewExtensions+Radius.swift */; };
 		EAA79D6121F0421900B1F460 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA79D6021F0421900B1F460 /* BaseViewController.swift */; };
@@ -47,6 +49,8 @@
 		EA29E84B21F1B73200EA1BE9 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		EA29E84D21F1B7E800EA1BE9 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		EA29E85021F1BD6F00EA1BE9 /* CustomError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomError.swift; sourceTree = "<group>"; };
+		EA29E85221F1D4D800EA1BE9 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		EA29E85421F1D63B00EA1BE9 /* WeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherService.swift; sourceTree = "<group>"; };
 		EAA79D5821F03FB900B1F460 /* InitialViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewModel.swift; sourceTree = "<group>"; };
 		EAA79D5B21F0409600B1F460 /* UIViewExtensions+Radius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewExtensions+Radius.swift"; sourceTree = "<group>"; };
 		EAA79D6021F0421900B1F460 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -177,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				EA29E84B21F1B73200EA1BE9 /* APIService.swift */,
+				EA29E85421F1D63B00EA1BE9 /* WeatherService.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -185,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				EA29E85021F1BD6F00EA1BE9 /* CustomError.swift */,
+				EA29E85221F1D4D800EA1BE9 /* Weather.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -357,12 +363,14 @@
 				EA29E84221F1A0A900EA1BE9 /* BaseViewModel.swift in Sources */,
 				EA29E85121F1BD6F00EA1BE9 /* CustomError.swift in Sources */,
 				EAB20B0A21F19451000C33F3 /* UITextFieldExtensions+Underline.swift in Sources */,
+				EA29E85321F1D4D800EA1BE9 /* Weather.swift in Sources */,
 				EA29E84621F1A6B800EA1BE9 /* UIViewController+Alert.swift in Sources */,
 				EA29E84C21F1B73200EA1BE9 /* APIService.swift in Sources */,
 				EAA79D6421F042CA00B1F460 /* LoginViewController.swift in Sources */,
 				EAA79D6121F0421900B1F460 /* BaseViewController.swift in Sources */,
 				EA29E84E21F1B7E800EA1BE9 /* Constants.swift in Sources */,
 				EAA79D5C21F0409600B1F460 /* UIViewExtensions+Radius.swift in Sources */,
+				EA29E85521F1D63B00EA1BE9 /* WeatherService.swift in Sources */,
 				EA29E84921F1AA2E00EA1BE9 /* CustomButtonView.swift in Sources */,
 				EA0D2EB021EEEE970038D2A6 /* InitialViewController.swift in Sources */,
 				EA0D2EAE21EEEE970038D2A6 /* AppDelegate.swift in Sources */,
