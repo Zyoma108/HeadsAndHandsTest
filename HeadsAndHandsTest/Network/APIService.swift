@@ -14,16 +14,22 @@ protocol APIService {
     
     associatedtype T: Decodable
     
-    static func mapper(data: Data) throws -> T
+    var url: String { get }
+    var method: HTTPMethod { get }
+    var parameters: [String: Any] { get }
     
 }
 
 extension APIService {
     
-    static func fetch(url: String, parameters: [String: Any], method: HTTPMethod) -> Observable<T> {
-        return Observable.create({ observer in
+    func fetch() -> Observable<T> {
+        // create request object
+        let apiRequest = request(url, method: method, parameters: parameters)
+        
+        // create observable
+        let observable: Observable<Data> = Observable.create({ observer in
             let requestQueue = DispatchQueue.global(qos: .utility)
-            let apiRequest = request(url, method: method, parameters: parameters)
+    
             apiRequest.response(queue: requestQueue) { response in
                 if let error = response.error {
                     observer.onError(error)
@@ -37,9 +43,16 @@ extension APIService {
             
             return Disposables.create { apiRequest.cancel() }
         }).subscribeOn(ConcurrentDispatchQueueScheduler(qos: .utility))
-            .observeOn(ConcurrentDispatchQueueScheduler(qos: .userInitiated))
-            .map(mapper)
-            .observeOn(MainScheduler.instance)
+        
+        // map data and return in main queue
+        return observable.observeOn(ConcurrentDispatchQueueScheduler(qos: .userInitiated)).map({ data -> T in
+            do {
+                return try JSONDecoder().decode(T.self, from: data)
+            } catch {
+                print(error)
+                throw CustomError(description: "Невозможно декодировать данные")
+            }
+        }).observeOn(MainScheduler.instance)
     }
     
 }
