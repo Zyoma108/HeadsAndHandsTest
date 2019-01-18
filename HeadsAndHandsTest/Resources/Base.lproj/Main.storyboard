@@ -124,6 +124,9 @@
                                                         <real key="value" value="12"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="forgotButtonClicked:" destination="eAg-sG-rbx" eventType="touchUpInside" id="XzN-Zt-dWS"/>
+                                                </connections>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tFz-AX-3ld" userLabel="Login Button">
                                                 <rect key="frame" x="97.5" y="143" width="150" height="44"/>

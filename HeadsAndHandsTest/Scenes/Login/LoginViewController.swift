@@ -46,9 +46,13 @@ class LoginViewController: BaseViewController {
     }
     
     @IBAction private func signUpButtonClicked(_ sender: Any) {
-        
-    }
 
+    }
+    
+    @IBAction private func forgotButtonClicked(_ sender: Any) {
+
+    }
+    
     @IBAction private func textDidChange(_ sender: UITextField) {
         switch sender {
         case emailTextField:

@@ -102,15 +102,11 @@ class CustomButtonView: UIControl {
     
     // MARK: - Actions
     @objc private func touchDown() {
-        UIView.animate(withDuration: 0.1) { [weak self] in
-            self?.titleLabel.alpha = 0.4
-        }
+        titleLabel.textColor = titleColor.withAlphaComponent(0.4)
     }
     
     @objc private func touchUp() {
-        UIView.animate(withDuration: 0.1) { [weak self] in
-            self?.titleLabel.alpha = 1
-        }
+        titleLabel.textColor = titleColor
     }
 
 }
