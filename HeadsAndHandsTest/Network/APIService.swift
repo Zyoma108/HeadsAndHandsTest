@@ -22,7 +22,7 @@ protocol APIService {
 
 extension APIService {
     
-    func fetch() -> Observable<T> {
+    func fetchObservable() -> Observable<T> {
         // create request object
         let apiRequest = request(url, method: method, parameters: parameters)
         
