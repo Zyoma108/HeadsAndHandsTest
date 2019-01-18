@@ -13,6 +13,8 @@
 		EA0D2EB321EEEE970038D2A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA0D2EB121EEEE970038D2A6 /* Main.storyboard */; };
 		EA0D2EB521EEEE990038D2A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA0D2EB421EEEE990038D2A6 /* Assets.xcassets */; };
 		EA0D2EB821EEEE990038D2A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA0D2EB621EEEE990038D2A6 /* LaunchScreen.storyboard */; };
+		EA29E84221F1A0A900EA1BE9 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA29E84121F1A0A900EA1BE9 /* BaseViewModel.swift */; };
+		EA29E84421F1A19A00EA1BE9 /* StringExtensions+Validators.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA29E84321F1A19A00EA1BE9 /* StringExtensions+Validators.swift */; };
 		EAA79D5921F03FB900B1F460 /* InitialViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA79D5821F03FB900B1F460 /* InitialViewModel.swift */; };
 		EAA79D5C21F0409600B1F460 /* UIViewExtensions+Radius.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA79D5B21F0409600B1F460 /* UIViewExtensions+Radius.swift */; };
 		EAA79D6121F0421900B1F460 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA79D6021F0421900B1F460 /* BaseViewController.swift */; };
@@ -33,6 +35,8 @@
 		EA0D2EB421EEEE990038D2A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA0D2EB721EEEE990038D2A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EA0D2EB921EEEE990038D2A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA29E84121F1A0A900EA1BE9 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		EA29E84321F1A19A00EA1BE9 /* StringExtensions+Validators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StringExtensions+Validators.swift"; sourceTree = "<group>"; };
 		EAA79D5821F03FB900B1F460 /* InitialViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewModel.swift; sourceTree = "<group>"; };
 		EAA79D5B21F0409600B1F460 /* UIViewExtensions+Radius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewExtensions+Radius.swift"; sourceTree = "<group>"; };
 		EAA79D6021F0421900B1F460 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -140,6 +144,14 @@
 			path = Initial;
 			sourceTree = "<group>";
 		};
+		EA29E84021F1A09B00EA1BE9 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EA29E84121F1A0A900EA1BE9 /* BaseViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		EAA79D5A21F0406600B1F460 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -147,6 +159,7 @@
 				EAB20B0921F19451000C33F3 /* UITextFieldExtensions+Underline.swift */,
 				EAB20B0D21F19751000C33F3 /* UITextFieldExtension+FloatingPlaceholder.swift */,
 				EAB20B0B21F196A2000C33F3 /* UIColorExtensions.swift */,
+				EA29E84321F1A19A00EA1BE9 /* StringExtensions+Validators.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -154,6 +167,7 @@
 		EAA79D5E21F0419800B1F460 /* CustomComponents */ = {
 			isa = PBXGroup;
 			children = (
+				EA29E84021F1A09B00EA1BE9 /* ViewModel */,
 				EAA79D5F21F041FA00B1F460 /* ViewController */,
 			);
 			path = CustomComponents;
@@ -301,6 +315,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EAB20B0C21F196A2000C33F3 /* UIColorExtensions.swift in Sources */,
+				EA29E84221F1A0A900EA1BE9 /* BaseViewModel.swift in Sources */,
 				EAB20B0A21F19451000C33F3 /* UITextFieldExtensions+Underline.swift in Sources */,
 				EAA79D6421F042CA00B1F460 /* LoginViewController.swift in Sources */,
 				EAA79D6121F0421900B1F460 /* BaseViewController.swift in Sources */,
@@ -308,6 +323,7 @@
 				EA0D2EB021EEEE970038D2A6 /* InitialViewController.swift in Sources */,
 				EA0D2EAE21EEEE970038D2A6 /* AppDelegate.swift in Sources */,
 				EAB20B0E21F19751000C33F3 /* UITextFieldExtension+FloatingPlaceholder.swift in Sources */,
+				EA29E84421F1A19A00EA1BE9 /* StringExtensions+Validators.swift in Sources */,
 				EAA79D5921F03FB900B1F460 /* InitialViewModel.swift in Sources */,
 				EAA79D6621F042EC00B1F460 /* LoginViewModel.swift in Sources */,
 			);

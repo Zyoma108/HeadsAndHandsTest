@@ -42,11 +42,22 @@ class LoginViewController: BaseViewController {
     
     // MARK: - Actions
     @IBAction private func loginButtonClicked(_ sender: Any) {
-        
+        viewModel.login()
     }
     
     @IBAction private func signUpButtonClicked(_ sender: Any) {
         
+    }
+
+    @IBAction private func textDidChange(_ sender: UITextField) {
+        switch sender {
+        case emailTextField:
+            viewModel.email = sender.text
+        case passwordTextField:
+            viewModel.password = sender.text
+        default:
+            break
+        }
     }
     
     @objc private func tapOnBackground() {
@@ -60,9 +71,13 @@ class LoginViewController: BaseViewController {
         loginButton.cornerRadius = loginButton.frame.height / 2
         [emailTextField, passwordTextField].forEach { textField in
             textField?.delegate = self
-            textField?.addUnderLine(with: .whiteThree)
+            textField?.addUnderLineWith(color: .whiteThree)
             textField?.addFloatingPlaceholderWith(font: UIFont.systemFont(ofSize: 12), color: .warmGrey)
         }
+        
+        viewModel.errorSubject.subscribe(onNext: { error in
+            print("validation error \(error)")
+        }).disposed(by: disposeBag)
     }
     
     private func setVisibleViewBottomWith(height: CGFloat) {

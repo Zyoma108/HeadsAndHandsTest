@@ -7,7 +7,39 @@
 //
 
 import Foundation
+import RxSwift
 
-class LoginViewModel {
+class LoginViewModel: BaseViewModel {
+    
+    let errorSubject = PublishSubject<String>()
+    
+    var email: String?
+    var password: String?
+    
+    func login() {
+        // validate email
+        guard let email = email, !email.isEmpty else {
+            errorSubject.onNext("Почта не должна быть пустой")
+            return
+        }
+        
+        guard email.isValidEmail else {
+            errorSubject.onNext("Введен некоректный адрес почты")
+            return
+        }
+
+        // validate password
+        guard let password = password, !password.isEmpty else {
+            errorSubject.onNext("Пароль не должен быть пустым")
+            return
+        }
+        
+        guard password.isValidPassword else {
+            errorSubject.onNext("Пароль должен содержать минимум 6 символов, минимум 1 строчную букву, 1 заглавную, и 1 цифру")
+            return
+        }
+            
+    }
+    
     
 }

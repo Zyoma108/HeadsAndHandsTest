@@ -10,7 +10,7 @@ import UIKit
 
 extension UITextField {
     
-    func addUnderLine(with color: UIColor) {
+    func addUnderLineWith(color: UIColor) {
         let line = lineView()
         line.backgroundColor = color
     }
