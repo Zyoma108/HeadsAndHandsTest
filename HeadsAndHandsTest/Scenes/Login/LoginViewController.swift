@@ -60,7 +60,7 @@ class LoginViewController: BaseViewController {
         loginButton.cornerRadius = loginButton.frame.height / 2
         [emailTextField, passwordTextField].forEach { textField in
             textField?.delegate = self
-            textField?.addUnderLine(with: UIColor(white: 235 / 255, alpha: 1))
+            textField?.addUnderLine(with: .whiteThree)
         }
     }
     
